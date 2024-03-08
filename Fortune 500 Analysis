@@ -71,3 +71,5 @@ END as employee_retention
 FROM fortune_companies
 WHERE industry="Retail";
 
+# Which industries have an average paid_time_off_days of at least 18 days, and what are their avg paid time off?
+
