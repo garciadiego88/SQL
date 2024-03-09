@@ -73,3 +73,8 @@ WHERE industry="Retail";
 
 # Which industries have an average paid_time_off_days of at least 18 days, and what are their avg paid time off?
 
+SELECT industry, ROUND(AVG(paid_time_off_days),1) AS avg_paid_time_off
+FROM fortune_companies
+GROUP BY industry
+HAVING avg_paid_time_off>=15;
+
