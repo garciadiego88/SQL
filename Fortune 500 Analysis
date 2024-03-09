@@ -82,3 +82,7 @@ FROM fortune_companies
 WHERE healthcare_benefits=1
 AND maternity_leave_weeks>=9;
 
+# Which company in the Technology industry has the most employees, and what's their revenue? 
+SELECT company_name, max(employees)
+FROM fortune_companies
+WHERE industry = 'Technology';
