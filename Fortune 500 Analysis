@@ -61,7 +61,6 @@ VALUES
 # Analysis: 
 
 # Assign all the companies in the avg_employee_tenure industry as "excellent", "acceptable", or "poor" based on the employee tenure average. 
-
 SELECT company_name,
 CASE 
   WHEN avg_employee_tenure >= 6 THEN 'excellent'
@@ -72,9 +71,12 @@ FROM fortune_companies
 WHERE industry="Retail";
 
 # Which industries have an average paid_time_off_days of at least 18 days, and what are their avg paid time off?
-
 SELECT industry, ROUND(AVG(paid_time_off_days),1) AS avg_paid_time_off
 FROM fortune_companies
 GROUP BY industry
 HAVING avg_paid_time_off>=15;
+
+# What companies have healthcare benefits *and* provides maternity leave in weeks?
+SELECT company_name
+FROM fortune_companies
 
