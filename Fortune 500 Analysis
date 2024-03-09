@@ -79,4 +79,6 @@ HAVING avg_paid_time_off>=15;
 # What companies have healthcare benefits *and* provides maternity leave in weeks?
 SELECT company_name
 FROM fortune_companies
+WHERE healthcare_benefits=1
+AND maternity_leave_weeks>=9;
 
